@@ -1905,7 +1905,7 @@ void HT_caps_handler(_adapter *padapter, PNDIS_802_11_VARIABLE_IEs pIE)
 
 	pmlmeinfo->HT_caps_enable = 1;
 
-	for (i = 0; i < (pIE->Length); i++) {
+	for (i = 0; i < (pIE->Length) && i < 26; i++) {
 		if (i != 2) {
 			/*	Commented by Albert 2010/07/12 */
 			/*	Got the endian issue here. */
